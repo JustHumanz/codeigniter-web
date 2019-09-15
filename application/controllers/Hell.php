@@ -20,6 +20,36 @@ class Hell extends CI_Controller {
 	 */
 	public function index()
 	{
+		echo "Latihan";
+	}
+	function nil()
+	{
+		if($this->input->post('kir')) {
+			$has = $this->input->post();
+			$p1 = $this->input->post('tugas');
+			$p2 = $this->input->post('uts');
+			$p3 = $this->input->post('uas');
+			$hasil = $p1+$p2+$p3;
+			$pp = $p1*0.4 + $p2*0.3 + $p3*0.3;
+
+			if ($pp>=80) {
+			$grade = "A";
+			}
+			elseif ($pp>=70){
+			$grade = "B";
+			}
+			elseif ($pp>=50){
+			$grade = "C";
+			}
+			elseif ($pp>=40){
+			$grade = "D";
+			}
+			else{
+			$grade = "E";
+			}
+			echo "Nilai Kamu ".$pp." Grade yang didapat ".$grade;
+		}
 		$this->load->view('hell');
+
 	}
 }

@@ -6,11 +6,13 @@
   </head>
   <body>
     <font size="5">
-    <center>The quick brown fox jumps over the lazy dog</center>
+    <center>Nilai</center>
   </font>
-    <?php
-    echo "Aldin";
-    echo "</br>";
-    echo "Jasa sysadmin murah";?>
+  <form action="" method="post">
+    Tugas<input type="text" name="tugas"><br>
+    UTS <input type="text" name="uts"><br>
+    UAS <input type="text" name="uas"><br>
+    <input type="submit" value="Submit" name="kir">
+  </form>
   </body>
 </html>
