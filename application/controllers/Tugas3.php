@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class HI extends CI_Controller {
+class Tugas3 extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,15 +20,17 @@ class HI extends CI_Controller {
 	 */
 	public function index()
 	{
-    $data['title'] = "HI";
-		$this->load->view('Tes',$data);
+		$this->load->view('tugas3');
 	}
-  public function nrp($nama=null,$nrp=0)
+  public function readExcel($p)
   {
-    $dat['body'] = "Show Data Mahasiswa";
-    $dat['nama'] = $nama;
-    $dat['nrp'] = $nrp;
-    $this->load->view('nrp',$dat);
-  }
+    $this->load->library('csvreader');
+    $result = $this->csvreader->parse_file('/home/humanz/Web/codeigniter-web/application/libraries/data_mhs.csv');
 
+    $data['csvData'] =  $result;
+		$data['kel'] =$p;
+
+
+    $this->load->view('view_csv', $data);
+  }
 }

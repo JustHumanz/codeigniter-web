@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Hell extends CI_Controller {
+class Tugas2 extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,7 +20,7 @@ class Hell extends CI_Controller {
 	 */
 	public function index()
 	{
-		echo "Latihan";
+		echo "Tugas 2";
 	}
 	function nil()
 	{
@@ -49,7 +49,7 @@ class Hell extends CI_Controller {
 			}
 			echo "Nilai Kamu ".$pp." Grade yang didapat ".$grade;
 		}
-		$this->load->view('hell');
+		$this->load->view('tugas2');
 
 	}
 }
