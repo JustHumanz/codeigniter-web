@@ -25,7 +25,6 @@ class Tugas2 extends CI_Controller {
 	function nil()
 	{
 		if($this->input->post('kir')) {
-			$has = $this->input->post();
 			$p1 = $this->input->post('tugas');
 			$p2 = $this->input->post('uts');
 			$p3 = $this->input->post('uas');

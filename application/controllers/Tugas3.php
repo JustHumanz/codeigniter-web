@@ -31,6 +31,6 @@ class Tugas3 extends CI_Controller {
 		$data['kel'] =$p;
 
 
-    $this->load->view('view_csv', $data);
+    $this->load->view('tugas3', $data);
   }
 }
