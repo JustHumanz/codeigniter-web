@@ -7,7 +7,6 @@
   <body>
     <table cellpadding="0" cellspacing="0" width="100%">
     <tr>
-            <td width = "10%">Id</td>
             <td width = "10%">Username</td>
             <td width = "10%">Email</td>
             <td width = "10%">Tgl pembuatan akun</td>
@@ -17,7 +16,6 @@
               ?>
 
                 <tr>
-                    <td><?php echo $field->id; ?></td>
                     <td><?php echo $field->username?></td>
                     <td><?php echo $field->email?></td>
                     <td><?php echo $field->tgl?></td>

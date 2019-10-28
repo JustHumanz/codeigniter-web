@@ -34,9 +34,11 @@
                 'email' =>   $email
               );
               $tgl = date('Y-m-d');
+              $id = mt_rand(1, 100);
               $this->load->view('v_form_ber', $dat);
-              $sql = "insert into users (username, password, email, tgl)
-              VALUES (".$this->db->escape($username).", ".
+              $sql = "insert into users (id, username, password, email, tgl)
+              VALUES (".$this->db->escape($id).", ".
+              $this->db->escape($username).", ".
               $this->db->escape($password).", ".
               $this->db->escape($email).", ".
               $this->db->escape($tgl).")";
