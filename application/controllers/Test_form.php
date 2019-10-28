@@ -5,15 +5,16 @@
      function __construct(){
    		parent::__construct();
    		$this->load->model('Get_user');
-   	}
+      $this->load->database();
+   	 }
+
 
       public function index() {
          /* Load form helper */
          $this->load->helper(array('form','date','url'));
 
          /* Load form validation library */
-         $this->load->library(array('form_validation','session','database'));
-
+         $this->load->library('form_validation');
          /* Set validation rule for name field in the form */
          $this->form_validation->set_rules('username', 'Username', 'required');
          $this->form_validation->set_rules('password', 'Password', 'required');
