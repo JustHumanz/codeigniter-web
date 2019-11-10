@@ -2,14 +2,8 @@
 
    class Test_form extends CI_Controller {
 
-     function __construct(){
-   		parent::__construct();
-   		$this->load->model('Get_user');
-      $this->load->database();
-   	 }
-
-
       public function index() {
+        $this->load->database();
          /* Load form helper */
          $this->load->helper(array('form','date','url'));
 
@@ -34,11 +28,9 @@
                 'email' =>   $email
               );
               $tgl = date('Y-m-d');
-              $id = mt_rand(1, 100);
               $this->load->view('v_form_ber', $dat);
-              $sql = "insert into users (id, username, password, email, tgl)
-              VALUES (".$this->db->escape($id).", ".
-              $this->db->escape($username).", ".
+              $sql = "insert into users (username, password, email, tgl)
+              VALUES (".$this->db->escape($username).", ".
               $this->db->escape($password).", ".
               $this->db->escape($email).", ".
               $this->db->escape($tgl).")";
@@ -47,8 +39,25 @@
          }
       }
       public function user(){
-        $data['users'] = $this->Get_user->get_data()->result();
+        $this->load->database();
+        $data['users'] = $this->db->get('users')->result();
         $this->load->view('user_view',$data);
       }
+
+      public function delete(){
+        $this->load->helper('form');
+        $this->load->database();
+        $data['users'] = $this->db->get('users')->result();
+        $this->load->view('del_user',$data);
+
+        if ($this->input->post('send')) {
+          $a = $this->input->post('id');
+          $b = $this->input->post('user');
+          $this->db->delete('users',array('id' => $a,'username' => $b));
+          redirect($this->uri->uri_string());
+        }
+
+
+    	}
    }
 ?>

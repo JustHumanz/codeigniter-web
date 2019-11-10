@@ -5,3 +5,4 @@ class Get_user extends CI_Model{
 		return $this->db->get('users');
 	}
 }
+?>

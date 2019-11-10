@@ -5,8 +5,9 @@
     <title></title>
   </head>
   <body>
+    <?php echo validation_errors(); ?>
+    <?php echo form_open('Test_form/delete'); ?>
     <?php echo anchor('Test_form', 'Input data lagi'); ?> <br>
-    <?php echo anchor('Test_form/delete', 'Delete user'); ?>
     <table cellpadding="0" cellspacing="0" width="100%">
     <tr>
             <td width = "10%">ID</td>
@@ -27,5 +28,14 @@
             <?php
             }?>
 </table>
+<h3><center>Delete User</center></h3>
+
+<form method="POST" name="form" action="">
+  <label>ID</label><br/>
+    <input type="text" name="id"><br/>
+  <label>Username</label><br/>
+    <input type="text" name="user"><br/>
+    <input type="submit" value="Kirim" name="send">
+</form>
   </body>
 </html>
