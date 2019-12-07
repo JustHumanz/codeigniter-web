@@ -26,7 +26,7 @@ if (isset($row))
 }
 else {
   echo "Dokument tidak ditemukan didatabase,kemungkinan dokumen palsu atau sudah diubah </br>";
-  echo anchor('ver', 'Upload Another File!');
+  echo anchor('index.php/ver', 'Upload Another File!');
 }
 
 ?>

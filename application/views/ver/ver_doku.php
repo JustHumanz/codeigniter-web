@@ -6,7 +6,7 @@
 <center>Selamat datang di validitasi dokumen berbasis daring </center>
 <?php echo $error;?>
 
-<?php echo form_open_multipart('ver');?>
+<?php echo form_open_multipart('index.php/ver');?>
 
 <input type="file" name="userfile" size="20" />
 
