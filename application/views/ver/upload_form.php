@@ -6,7 +6,7 @@
 
 <?php echo $error;?>
 
-<?php echo form_open_multipart('index.php/doku/do_upload');?>
+<?php echo form_open_multipart('doku/do_upload');?>
 
 Nama Dokumen </br>
 <input type="text" name="nama" />
@@ -18,7 +18,7 @@ Nama Dokumen </br>
 <br /><br />
 
 <input type="submit" value="upload" /></br>
-<p><?php echo anchor('index.php/doku', 'Lihat list'); ?></p>
+<p><?php echo anchor('doku', 'Lihat list'); ?></p>
 </form>
 
 </body>
