@@ -29,18 +29,18 @@ class Login extends CI_Controller{
             'status' => "login"
           );
           $this->session->set_userdata($data_session);
-          redirect(base_url("doku"));
+          redirect(base_url("index.php/doku"));
 
         }
         else {
           echo "Username & password salah";
-          redirect(base_url("Login"));
+          redirect(base_url("index.php/Login"));
         }
       }
     }
     function logout()
     {
       $this->session->sess_destroy();
-      redirect(base_url("Login"));
+      redirect(base_url("index.php/Login"));
     }
 }

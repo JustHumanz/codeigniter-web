@@ -35,8 +35,8 @@ else {
 }
 
  ?>
-<p><?php echo anchor('doku/add', 'Upload Another File!'); ?></p>
-<p><?php echo anchor('doku', 'Lihat list'); ?></p>
+<p><?php echo anchor('index.php/doku/add', 'Upload Another File!'); ?></p>
+<p><?php echo anchor('index.php/doku', 'Lihat list'); ?></p>
 
 </body>
 </html>

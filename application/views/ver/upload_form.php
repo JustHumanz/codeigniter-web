@@ -18,7 +18,7 @@ Nama Dokumen </br>
 <br /><br />
 
 <input type="submit" value="upload" /></br>
-<p><?php echo anchor('doku', 'Lihat list'); ?></p>
+<p><?php echo anchor('index.php/doku', 'Lihat list'); ?></p>
 </form>
 
 </body>
