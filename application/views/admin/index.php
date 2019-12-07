@@ -2,6 +2,7 @@
 	<a href="<?php echo site_url('admin/add'); ?>" class="btn btn-success">Add</a>
 	<a href="<?php echo site_url('Login/logout');?>" class="btn btn-danger">Logout</a>
 	<a href="<?php echo site_url('doku/');?>" class="btn btn-primary">Dokumen list</a>
+	<a href="<?php echo site_url('ver/');?>" class="btn btn-info">Validitasi Dokumen</a>
 </div>
 
 <table class="table table-striped table-bordered">

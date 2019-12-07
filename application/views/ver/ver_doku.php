@@ -3,6 +3,7 @@
 <title>Upload Form</title>
 </head>
 <body>
+<p><?php echo anchor('login', 'Admin'); ?></p>
 <center>Selamat datang di validitasi dokumen berbasis daring </center>
 <?php echo $error;?>
 
@@ -15,6 +16,5 @@
 <input type="submit" value="upload" />
 
 </form>
-
 </body>
 </html>
