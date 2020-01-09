@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="css/freelancer.css">
+<link href="css/util.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<head>
+  <title></title>
+</head>
+<body>
+<header class="bg-primary">
+<a href="/admin/">Admin</a>
+<header class="bg-primary text-white text-center">
+<h1 class="text-center masthead">Selamat datang di validitasi dokumen berbasis daring</h1>
+<h5>Silahkan unggah berkas dengan mengeklik tombol dibawah</h5><br>
+<form action="ver/" method="post" enctype="multipart/form-data" id="up">
+  <div class="upload-btn-wrapper">
+    <button class="btn">Unggah berkas</button>
+    <input type="file" name="userfile" id="upfile"/>
+  </div>
+</form>
+<button type="submit" form="up" value="Submit" onclick='return check();'>Kirim</button>
+</body>
+<script type="text/javascript">
+function check(){
+    var file = document.getElementById('upfile');
+    if(file.value === null || file.value === ""){
+        alert('Berkas kosong,harap diisi');
+        return false;
+    }
+    }
+
+</script>
+</html>

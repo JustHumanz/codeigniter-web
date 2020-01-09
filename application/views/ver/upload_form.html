@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<link href="../css/freelancer.css" rel="stylesheet" type="text/css" >
+<link href="../css/util.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+<head>
+  <title>Upload Dokumen</title>
+</head>
+<body>
+<header class="masthead bg-primary text-white text-center">
+<h1>Silahkan unggah berkas dengan mengeklik tombol dibawah</h1><br>
+<form action="do_upload/" method="post" enctype="multipart/form-data" id="up">
+  <div class="form-group row d-flex justify-content-center">
+    <div class="col-xs-2">
+      <label for="ex1">Nama Berkas</label>
+      <input class="form-control" id="ex1" type="text" name="nama">
+    </div>
+  </div>
+  <div class="upload-btn-wrapper">
+    <button class="btn">Unggah berkas</button>
+    <input type="file" name="userfile"/>
+  </div><br>
+  <button class="btn btn-success" type="submit" form="up" value="Submit">Kirim</button>
+</form><br>
+<a href="/doku" class="btn btn-default">Lihat daftar dokumen</a>
+</body>
+</html>

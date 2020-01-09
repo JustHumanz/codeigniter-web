@@ -13,6 +13,6 @@ class Dashboard extends CI_Controller{
 
     function index()
     {
-        $this->load->view('ver/ver_doku', array('error' => ' ' ));
+        $this->load->view('ver/ver_doku.html', array('error' => ' ' ));
     }
 }

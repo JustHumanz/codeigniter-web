@@ -1,7 +1,7 @@
 <div class="pull-right">
 	<a href="<?php echo site_url('doku/add'); ?>" class="btn btn-success">Add Dokumen</a>
 	<a href="<?php echo site_url('Admin/');?>" class="btn btn-primary">Add Admin</a>
-	<a href="<?php echo site_url('ver/');?>" class="btn btn-info">Validitasi Dokumen</a>
+	<a href="<?php echo base_url()?>" class="btn btn-info">Validitasi Dokumen</a>
 	<a href="<?php echo site_url('Login/logout');?>" class="btn btn-danger">Logout</a>
 </div>
 

@@ -25,7 +25,7 @@ class Doku extends CI_Controller{
         $data['_view'] = 'doku/index';
         $this->load->view('layouts/main',$data);
       }
-      
+
     }
 
     /*
@@ -54,7 +54,7 @@ class Doku extends CI_Controller{
     */
     function add()
     {
-      $this->load->view('ver/upload_form', array('error' => ''));
+      $this->load->view('ver/upload_form.html', array('error' => ''));
     }
 
     function do_upload()

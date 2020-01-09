@@ -15,7 +15,7 @@ class Ver extends CI_Controller{
     {
       $config['upload_path']          = 'uploads/ver';
       $config['allowed_types']        = 'gif|jpg|png|doc|pdf';
-      $config['max_size']             = 1000;
+      $config['max_size']             = 100000;
       $config['max_width']            = 1024;
       $config['max_height']           = 1768;
 
@@ -24,7 +24,7 @@ class Ver extends CI_Controller{
       {
               $error = array('error' => $this->upload->display_errors());
 
-              $this->load->view('ver/ver_doku', $error);
+              $this->load->view('ver/ver_doku.html', $error);
       }
       else
       {

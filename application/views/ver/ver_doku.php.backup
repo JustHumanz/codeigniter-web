@@ -6,15 +6,14 @@
 <p><?php echo anchor('login', 'Admin'); ?></p>
 <center>Selamat datang di validitasi dokumen berbasis daring </center>
 <?php echo $error;?>
-
 <?php echo form_open_multipart('index.php/ver');?>
 
-<input type="file" name="userfile" size="20" />
+
+<input type="file" name="userfile"/>
 
 <br /><br />
 
 <input type="submit" value="upload" />
 
-</form>
 </body>
 </html>
