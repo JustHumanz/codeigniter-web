@@ -62,7 +62,8 @@ else {
   <div class="jembut">
   <br>
   <img class="masthead-avatar mb-5" src="'.base_url().'img/avataaars.svg" alt="">
-  <h1>DOKUEMN TIDAK DITEMUKAN DI DATABASE,KEMUNGKINAN DOKUEMN PALSU ATAU SUDAH DIUBAH</h1>
+  <h1>DOKUEMN TIDAK DITEMUKAN DI DATABASE</h1>
+  <h3>KEMUNGKINAN DOKUEMN PALSU ATAU SUDAH DIUBAH</h3>
   <br>
   <button>
    Kembali
