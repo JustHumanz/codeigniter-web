@@ -30,7 +30,7 @@ if (isset($row))
     <br>
     <img class="masthead-avatar mb-5" src="'.base_url().'img/avataaars.svg" alt="">
     <h1>DOKUEMN DITEMUKAN</h1>
-    <b>Nama Dokumen		:'.$row->N_dokument.'</b>
+    <b>Nama Dokumen		: '.$row->N_dokument.'</b>
     <br>
     <b>Tanggal Upload 	: '.$row->W_dokument.'</b>
     <br>
@@ -63,12 +63,11 @@ else {
   <br>
   <img class="masthead-avatar mb-5" src="'.base_url().'img/avataaars.svg" alt="">
   <h1>DOKUEMN TIDAK DITEMUKAN DI DATABASE</h1>
-  <h3>KEMUNGKINAN DOKUEMN PALSU ATAU SUDAH DIUBAH</h3>
+  <h4 style="color:black">KEMUNGKINAN DOKUEMN PALSU ATAU SUDAH DIUBAH</h4>
   <br>
   <button>
-   Kembali
+  '.anchor('ver', 'Kembali').'
   </button>
-  '.anchor('ver', 'Upload Another File!').'
 
   </div>
   </body>
