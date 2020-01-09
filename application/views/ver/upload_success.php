@@ -22,9 +22,9 @@ if (isset($row))
   if ($row->H_dokument == $md5file) {
     echo '<!DOCTYPE html>
     <html>
-    <link rel="stylesheet" type="text/css" href="css/freelancer.css">
-    <link href="css/util.css" rel="stylesheet">
-     <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="'.base_url().'css/freelancer.css">
+    <link href="'.base_url().'css/util.css" rel="stylesheet">
+     <link href="'.base_url().'css/main.css" rel="stylesheet">
     <head>
     	<title></title>
     </head>
@@ -58,9 +58,9 @@ else {
   $db2->query($sql);
   echo '<!DOCTYPE html>
   <html>
-  <link rel="stylesheet" type="text/css" href="css/freelancer.css">
-  <link href="css/util.css" rel="stylesheet">
-   <link href="css/main.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="'.base_url().'css/freelancer.css">
+  <link href="'.base_url().'css/util.css" rel="stylesheet">
+   <link href="'.base_url().'css/main.css" rel="stylesheet">
   <head>
   	<title></title>
   </head>

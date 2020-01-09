@@ -4,7 +4,6 @@
 </head>
 <body>
 
-<h3>Your file was successfully uploaded!</h3>
 <?php
 $db2 = $this->load->database('db_2', TRUE);
 $file =  $upload_data["full_path"];
@@ -19,9 +18,9 @@ if (isset($row))
   if ($row->H_dokument == $md5file) {
     echo '<!DOCTYPE html>
     <html>
-    <link rel="stylesheet" type="text/css" href="css/freelancer.css">
-    <link href="css/util.css" rel="stylesheet">
-     <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="'.base_url().'/css/freelancer.css">
+    <link href="'.base_url().'css/util.css" rel="stylesheet">
+     <link href="'.base_url().'css/main.css" rel="stylesheet">
     <head>
     	<title></title>
     </head>
@@ -52,9 +51,9 @@ if (isset($row))
 else {
   echo '<!DOCTYPE html>
   <html>
-  <link rel="stylesheet" type="text/css" href="css/freelancer.css">
-  <link href="css/util.css" rel="stylesheet">
-   <link href="css/main.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="'.base_url().'css/freelancer.css">
+  <link href="'.base_url().'css/util.css" rel="stylesheet">
+   <link href="'.base_url().'css/main.css" rel="stylesheet">
   <head>
     <title></title>
   </head>
