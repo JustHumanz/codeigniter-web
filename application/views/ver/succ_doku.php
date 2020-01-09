@@ -28,7 +28,7 @@ if (isset($row))
     	 <header class="masthead bg-primary text-white text-center">
     <div class="jembut">
     <br>
-    <img class="masthead-avatar mb-5" src="img/avataaars.svg" alt="">
+    <img class="masthead-avatar mb-5" src="'.base_url().'img/avataaars.svg" alt="">
     <h1>DOKUEMN DITEMUKAN</h1>
     <b>Nama Dokumen		:'.$row->N_dokument.'</b>
     <br>
@@ -61,7 +61,7 @@ else {
      <header class="masthead bg-primary text-white text-center">
   <div class="jembut">
   <br>
-  <img class="masthead-avatar mb-5" src="img/avataaars.svg" alt="">
+  <img class="masthead-avatar mb-5" src="'.base_url().'img/avataaars.svg" alt="">
   <h1>DOKUEMN TIDAK DITEMUKAN DI DATABASE,KEMUNGKINAN DOKUEMN PALSU ATAU SUDAH DIUBAH</h1>
   <br>
   <button>

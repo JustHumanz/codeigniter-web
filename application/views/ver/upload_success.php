@@ -68,7 +68,7 @@ else {
   	 <header class="masthead bg-primary text-white text-center">
   <div class="jembut">
   <br>
-  <img class="masthead-avatar mb-5" src="img/avataaars.svg" alt="">
+  <img class="masthead-avatar mb-5" src="'.base_url().'img/avataaars.svg" alt="">
   <h1>UPLOAD SUCCES</h1>
   <br>
   <button>
