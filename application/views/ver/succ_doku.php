@@ -17,16 +17,62 @@ if (isset($row))
 {
 
   if ($row->H_dokument == $md5file) {
-    echo "Dokumen ditemukan </br>
-    Nama Dokumen : ".$row->N_dokument."</br>
-    Tanggal Dokumen diunggah : ".$row->W_dokument."</br>
-    Nilai Hash dari Dokumen tersebt : ".$row->H_dokument."</br>";
-    echo anchor('ver', 'Upload Another File!');
+    echo '<!DOCTYPE html>
+    <html>
+    <link rel="stylesheet" type="text/css" href="css/freelancer.css">
+    <link href="css/util.css" rel="stylesheet">
+     <link href="css/main.css" rel="stylesheet">
+    <head>
+    	<title></title>
+    </head>
+    <body>
+    	 <header class="masthead bg-primary text-white text-center">
+    <div class="jembut">
+    <br>
+    <img class="masthead-avatar mb-5" src="img/avataaars.svg" alt="">
+    <h1>DOKUEMN DITEMUKAN</h1>
+    <b>Nama Dokumen		:'.$row->N_dokument.'</b>
+    <br>
+    <b>Tanggal Upload 	: '.$row->W_dokument.'</b>
+    <br>
+    <b>Nilai Hash		: '.$row->H_dokument.'</b>
+    <br>
+
+    <br>
+    <button>
+     '.anchor('ver', 'Kembali').'
+    </button>
+
+
+    </div>
+    </body>
+    </html> ';
   }
 }
 else {
-  echo "Dokument tidak ditemukan didatabase,kemungkinan dokumen palsu atau sudah diubah </br>";
-  echo anchor('ver', 'Upload Another File!');
+  echo '<!DOCTYPE html>
+  <html>
+  <link rel="stylesheet" type="text/css" href="css/freelancer.css">
+  <link href="css/util.css" rel="stylesheet">
+   <link href="css/main.css" rel="stylesheet">
+  <head>
+    <title></title>
+  </head>
+  <body>
+     <header class="masthead bg-primary text-white text-center">
+  <div class="jembut">
+  <br>
+  <img class="masthead-avatar mb-5" src="img/avataaars.svg" alt="">
+  <h1>DOKUEMN TIDAK DITEMUKAN DI DATABASE,KEMUNGKINAN DOKUEMN PALSU ATAU SUDAH DIUBAH</h1>
+  <br>
+  <button>
+   Kembali
+  </button>
+  '.anchor('ver', 'Upload Another File!').'
+
+  </div>
+  </body>
+  </html> ';
 }
 
 ?>

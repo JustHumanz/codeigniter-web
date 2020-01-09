@@ -4,7 +4,6 @@
 </head>
 <body>
 
-<h3>Your file was successfully uploaded!</h3>
 
 <?php
 //print_r($upload_data);
@@ -21,9 +20,34 @@ $row = $query->row();
 if (isset($row))
 {
   if ($row->H_dokument == $md5file) {
-    echo "Dokumen sudah pernah diunggah\n
-    Nama Dokumen \t:".$row->N_dokument."\n
-    Tanggal Dokumen diunggah \t:".$row->W_dokument;
+    echo '<!DOCTYPE html>
+    <html>
+    <link rel="stylesheet" type="text/css" href="css/freelancer.css">
+    <link href="css/util.css" rel="stylesheet">
+     <link href="css/main.css" rel="stylesheet">
+    <head>
+    	<title></title>
+    </head>
+    <body>
+    	 <header class="masthead bg-primary text-white text-center">
+    <div class="jembut">
+    <br>
+    <img class="masthead-avatar mb-5" src="img/avataaars.svg" alt="">
+    <h1>DOKUMEN SUDAH PERNAH DIUNGGAH</h1>
+    <b>Nama Dokumen		: '.$row->N_dokument.'</b>
+    <br>
+    <b>Tanggal Upload 	: '.$row->W_dokument.'</b>
+    <br>
+    <br>
+
+    <br>
+    <button>
+     '.anchor('doku/add', 'Kembali').'
+    </button>
+
+    </div>
+    </body>
+    </html>';
   }
 }
 else {
@@ -32,11 +56,35 @@ else {
   $db2->escape($md5file).", ".
   $db2->escape($tgl).")";
   $db2->query($sql);
+  echo '<!DOCTYPE html>
+  <html>
+  <link rel="stylesheet" type="text/css" href="css/freelancer.css">
+  <link href="css/util.css" rel="stylesheet">
+   <link href="css/main.css" rel="stylesheet">
+  <head>
+  	<title></title>
+  </head>
+  <body>
+  	 <header class="masthead bg-primary text-white text-center">
+  <div class="jembut">
+  <br>
+  <img class="masthead-avatar mb-5" src="img/avataaars.svg" alt="">
+  <h1>UPLOAD SUCCES</h1>
+  <br>
+  <button>
+   '.anchor('doku/add', 'Kembali').'
+  </button>
+  <br>
+  <br>
+  <button>
+  '.anchor('doku', 'Lihat list').'
+  </button>
+
+  </div>
+  </body>
+  </html> ';
 }
 
  ?>
-<p><?php echo anchor('doku/add', 'Upload Another File!'); ?></p>
-<p><?php echo anchor('doku', 'Lihat list'); ?></p>
-
 </body>
 </html>
