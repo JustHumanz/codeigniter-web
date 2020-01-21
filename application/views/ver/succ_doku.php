@@ -71,6 +71,11 @@ if (isset($row))
     </div>
     </body>
     </html> ';
+    $file_log = "\ntanggal\t\t$date\nStatus\t\t\tDOKUEMN DITEMUKAN\nPengunggah\t\tUmum\nAlamat IP\t\t$ip_address\nNama Dokumen\t\t$row->N_dokument\nNilai Hash Dokumen\t$row->H_dokument\nInformasi Tambahan\t$couter\n\n___________________________________________________________________________";
+
+    $filedir = fopen($upload_data['file_path'] . "../log.txt","a+");
+    fwrite($filedir,$file_log);
+    fclose($filedir);
   }
 }
 else {
@@ -99,6 +104,11 @@ else {
   </div>
   </body>
   </html> ';
+  $file_log = "\ntanggal\t\t$date\nStatus\t\t\tDOKUEMN TIDAK DITEMUKAN DI DATABASE\nPengunggah\t\tUmum\nAlamat IP\t\t$ip_address\nNama Dokumen\t\t$row->N_dokument\nNilai Hash Dokumen\t$row->H_dokument\nInformasi Tambahan\t$counter\n\n___________________________________________________________________________";
+
+  $filedir = fopen($upload_data['file_path'] . "../log.txt","a+");
+  fwrite($filedir,$file_log);
+  fclose($filedir);
 }
 
 ?>

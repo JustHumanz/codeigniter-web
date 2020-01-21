@@ -6,13 +6,9 @@
 
 
 <?php
-//print_r($upload_data);
-//print_r($nama);
 $file =  $upload_data["full_path"];
 $md5file = md5_file($file);
-//echo $md5file;?>
-<?php
-$tgl = date('Y-m-d');
+
 $db2 = $this->load->database('db_2', TRUE);
 $query = $db2->query("select * from hash_dok.doku where H_dokument='".$md5file."';");
 $row = $query->row();
@@ -32,7 +28,7 @@ if (isset($row))
     	 <header class="masthead bg-primary text-white text-center">
     <div class="jembut">
     <br>
-    <img class="masthead-avatar mb-5" src="img/avataaars.svg" alt="">
+    <img class="masthead-avatar mb-5" src="'.base_url().'img/avataaars.svg" alt="">
     <h1>DOKUMEN SUDAH PERNAH DIUNGGAH</h1>
     <b>Nama Dokumen		: '.$row->N_dokument.'</b>
     <br>
@@ -48,6 +44,10 @@ if (isset($row))
     </div>
     </body>
     </html>';
+    $file_log = "\ntanggal\t\t$date\nStatus\t\t\tDOKUMEN SUDAH PERNAH DIUNGGAH\nPengunggah\t\t$username\nAlamat IP\t\t$ip_address\nNama Dokumen\t\t$row->N_dokument\nNilai Hash Dokumen\t$row->W_dokument\n\n___________________________________________________________________________";
+    $filedir = fopen($upload_data['file_path'] . "/log.txt","a+");
+    fwrite($filedir,$file_log);
+    fclose($filedir);
   }
 }
 else {
@@ -69,7 +69,7 @@ else {
   <div class="jembut">
   <br>
   <img class="masthead-avatar mb-5" src="'.base_url().'img/avataaars.svg" alt="">
-  <h1>UPLOAD SUCCES</h1>
+  <h1>UNGGAH DOKUMEN BERHASIL</h1>
   <br>
   <button>
    '.anchor('doku/add', 'Kembali').'
@@ -83,6 +83,10 @@ else {
   </div>
   </body>
   </html> ';
+  $file_log = "\ntanggal\t\t$date\nStatus\t\t\tUNGGAH DOKUMEN BERHASIL\nPengunggah\t\t$username\nAlamat IP\t\t$ip_address\nNama Dokumen\t\t$nama\nNilai Hash Dokumen\t$md5file\n\n___________________________________________________________________________";
+  $filedir = fopen($upload_data['file_path'] . "/log.txt","a+");
+  fwrite($filedir,$file_log);
+  fclose($filedir);
 }
 
  ?>

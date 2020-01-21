@@ -1,8 +1,9 @@
 <div class="pull-right">
-	<a href="<?php echo site_url('admin/add'); ?>" class="btn btn-success">Add Admin</a>
-	<a href="<?php echo site_url('doku/');?>" class="btn btn-primary">Dokumen list</a>
+	<a href="<?php echo site_url('admin/add'); ?>" class="btn btn-success">Tambah Admin</a>
+	<a href="<?php echo site_url('doku/');?>" class="btn btn-primary">Daftar Dokumen</a>
 	<a href="<?php echo base_url()?>" class="btn btn-info">Validitasi Dokumen</a>
-	<a href="<?php echo site_url('Login/logout');?>" class="btn btn-danger">Logout</a>
+	<a href="<?php echo site_url('doku/log'); ?>" class="btn btn-warning">Lihat Log</a>
+	<a href="<?php echo site_url('Login/logout');?>" class="btn btn-danger">Keluar</a>
 </div>
 
 <table class="table table-striped table-bordered">
@@ -20,8 +21,8 @@
 		<td><?php echo $A['Password']; ?></td>
 		<td><?php echo $A['Nama']; ?></td>
 		<td>
-            <a href="<?php echo site_url('admin/edit/'.$A['id']); ?>" class="btn btn-info btn-xs">Edit</a>
-            <a href="<?php echo site_url('admin/remove/'.$A['id']); ?>" class="btn btn-danger btn-xs">Delete</a>
+            <a href="<?php echo site_url('admin/edit/'.$A['id']); ?>" class="btn btn-info btn-xs">Ubah</a>
+            <a href="<?php echo site_url('admin/remove/'.$A['id']); ?>" class="btn btn-danger btn-xs">Hapus</a>
         </td>
     </tr>
 	<?php } ?>

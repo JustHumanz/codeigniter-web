@@ -1,0 +1,53 @@
+
+tanggal		2020-01-21 16:26:52
+Status			UNGGAH DOKUMEN BERHASIL
+Pengunggah		
+Alamat IP		
+Nama Dokumen		Man
+Nilai Hash Dokumen	e54fb1b9a31bdbcf9e3c56cd46a0d0d0
+
+___________________________________________________________________________
+tanggal		2020-01-21 16:27:29
+Status			DOKUMEN SUDAH PERNAH DIUNGGAH
+Pengunggah		admin
+Alamat IP		127.0.0.1
+Nama Dokumen		Man
+Nilai Hash Dokumen	2020-01-21
+
+___________________________________________________________________________
+tanggal		2020-01-21 16:31:14
+Status			DOKUEMN DITEMUKAN
+Pengunggah			Umum
+Alamat IP		127.0.0.1
+Nama Dokumen		Man
+Nilai Hash Dokumen	e54fb1b9a31bdbcf9e3c56cd46a0d0d0
+Informasi Tambahan		
+
+___________________________________________________________________________
+tanggal		2020-01-21 16:31:43
+Status			DOKUEMN DITEMUKAN
+Pengunggah			Umum
+Alamat IP		127.0.0.1
+Nama Dokumen		Man
+Nilai Hash Dokumen	e54fb1b9a31bdbcf9e3c56cd46a0d0d0
+Informasi Tambahan		File ini aman
+
+___________________________________________________________________________
+tanggal		2020-01-21 16:32:42
+Status			DOKUEMN DITEMUKAN
+Pengunggah		Umum
+Alamat IP		127.0.0.1
+Nama Dokumen		Man
+Nilai Hash Dokumen	e54fb1b9a31bdbcf9e3c56cd46a0d0d0
+Informasi Tambahan	File ini aman
+
+___________________________________________________________________________
+tanggal		2020-01-21 16:50:12
+Status			DOKUEMN DITEMUKAN
+Pengunggah		Umum
+Alamat IP		127.0.0.1
+Nama Dokumen		Man
+Nilai Hash Dokumen	e54fb1b9a31bdbcf9e3c56cd46a0d0d0
+Informasi Tambahan	File ini aman
+
+___________________________________________________________________________

@@ -26,7 +26,7 @@ class Admin extends CI_Controller{
         $data['_view'] = 'admin/index';
         $this->load->view('layouts/main',$data);
       }
-      
+
     }
 
     /*

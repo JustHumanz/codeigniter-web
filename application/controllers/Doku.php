@@ -28,37 +28,42 @@ class Doku extends CI_Controller{
 
     }
 
-    /*
-     * Adding a new doku
-     */
-     /*
     function add()
     {
-        if(isset($_POST) && count($_POST) > 0)
-        {
-            $params = array(
-				'N_dokument' => $this->input->post('N_dokument'),
-				'H_dokument' => $this->input->post('H_dokument'),
-				'W_dokument' => $this->input->post('W_dokument'),
-            );
+      if($this->session->userdata('status') != "login") {
+          return redirect('Login');
+      }
+      else {
+          $this->load->view('ver/upload_form.html', array('error' => ''));
+      }
 
-            $doku_id = $this->Doku_model->add_doku($params);
-            redirect('doku/index');
-        }
-        else
-        {
-            $data['_view'] = 'doku/add';
-            $this->load->view('layouts/main',$data);
-        }
     }
-    */
-    function add()
+
+    function log()
     {
-      $this->load->view('ver/upload_form.html', array('error' => ''));
+      if($this->session->userdata('status') != "login") {
+          return redirect('Login');
+      }
+      else {
+          $this->load->view('log/view_log', array('error' => ''));
+      }
+
     }
 
     function do_upload()
     {
+      if (!empty($_SERVER['HTTP_CLIENT_IP']))
+        {
+          $ip_address = $_SERVER['HTTP_CLIENT_IP'];
+        }
+      elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
+        {
+          $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        }
+      else
+        {
+          $ip_address = $_SERVER['REMOTE_ADDR'];
+        }
             $config['upload_path']          = 'uploads';
             $config['allowed_types']        = 'gif|jpg|png|doc|pdf';
             $config['max_size']             = 1000;
@@ -66,7 +71,6 @@ class Doku extends CI_Controller{
             $config['max_height']           = 1768;
 
             $this->load->library('upload', $config);
-            $tgl = date('Y-m-d');
             if ( ! $this->upload->do_upload('userfile'))
             {
                     $error = array('error' => $this->upload->display_errors());
@@ -77,7 +81,10 @@ class Doku extends CI_Controller{
             {
                     $data = array('upload_data' => $this->upload->data());
                     $data['nama'] = $this->input->post('nama');
-                    $data['tgl'] = $tgl;
+                    $data['tgl'] = date('Y-m-d');
+                    $data['date'] = date("Y-m-d H:i:s");
+                    $data['ip_address'] = $ip_address;
+                    $data['username'] = $this->session->userdata('nama');
                     $this->load->view('ver/upload_success', $data);
             }
     }
